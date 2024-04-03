@@ -1,0 +1,12 @@
+﻿ID,Country,City ,Plant type,ZIP code,Receiving_plant,x-coordinate,y-coordinate
+1,Portugal,Lissabon,Receiving plant,2710-207,2200,-9.369216,38.757301
+2,Spain,Alovera,Receiving plant,19208,1900,-3.243162431,40.57675934
+3,Italy,Cologno Monzese,Receiving plant,20093,2000,9.281575673,45.54113003
+4,France,Blyes,Receiving plant,1150,1800,5.261173337,45.83747369
+5,Belgium,Turnhout,Producing plant,2300,2300,4.928540898,51.29525785
+6,Latvia,Dobele,Producing plant,3701,3701,23.30237845,56.62518423
+7,Poland,Pionki,Producing plant,26-670,26-670,21.45811508,51.46902482
+8,Portugal,Lissabon,Producing plant,2710-207,2200,-9.369216,38.757301
+9,Slovenia,Srpenica,Producing plant,5224,5224,13.5166732,46.28409136
+10,Spain,Alovera,Producing plant,19208,1900,-3.243162431,40.57675934
+12,Turkey,"Tuzla, Istanbul",Producing plant,34956,34956,29.36691489,40.8858807
