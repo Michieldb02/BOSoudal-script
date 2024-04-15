@@ -1,0 +1,33 @@
+import pandas as pd
+
+# Read the CSV file containing education data into a DataFrame
+df_edu = pd.read_csv("Education2022.csv")
+
+# Drop rows with missing values
+df_edu.dropna(subset=['...2'], inplace=True)  # Replace '...2' with the actual column name
+
+# Rename columns
+df_edu.rename(columns={'...2': 'Percentage'}, inplace=True)  # Replace '...2' with the actual column name
+
+# Round min and max values
+min_value = round(df_edu['Percentage'].min())
+max_value = round(df_edu['Percentage'].max())
+
+# Define the number of bins
+num_bins = 5
+
+# Calculate bin width
+bin_width = (max_value - min_value) / num_bins
+
+# Define the custom bin boundaries
+custom_bin_boundaries = [round(min_value + i * bin_width) for i in range(num_bins + 1)]
+
+# Cut the data into custom ranges
+df_edu['Custom_bin'] = pd.cut(df_edu['Percentage'], bins=custom_bin_boundaries, include_lowest=True)
+
+# Count the frequency of values falling into each custom bin
+custom_bin_counts = df_edu['Custom_bin'].value_counts().sort_index()
+
+# Print the counts for each custom range
+for index, count in custom_bin_counts.items():
+    print(f"Frequency for range {index}: {count}")
